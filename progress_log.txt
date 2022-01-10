@@ -1,0 +1,72 @@
+1. checkpoint (10.3.)
+ - The classes Board, PileOfPieces, Piece and Game were created.
+   The class PuzzleGUI was also created but not yet implemented.
+ - Almost all methods in classes Board, PileOfPieces, Piece and Game were implemented.
+ - Methods addPiece, removePiece and movePiece were done and tested that they work
+   as well as the init method that creates padding for the board.
+ - Methods addPiece and takePiece were made and tested that they work right in PileOfPieces.
+ - In class Piece the methods addCoords, removeCoords and getCoords were made to handle the coordinates
+   of a piece. Some testing has also been done for these methods and they should work.
+ - The method generateSolution was implemented and tested as well as some help methods. Also 
+   StartGame was made and tested and the conditions for when the game is over were made in gameOver
+   and the correct solution could now be stored in the Game class.
+ - In FileOperations the method writeToFile was implemented and somewhat tested. ReadFromFile was 
+   made but not tested yet.
+ - There have been some faults but they haven't been so challenging that I couldn't have solved them. The only 
+   challenge that hasn't been solved is that the project doesn't find the scalatest library and I haven't come up
+   up with a solution. 
+ - The workload during these two weeks was approximately 20 hours.
+ - I'm a bit ahead of the schedule I made since only two weeks has passed by and I have already completed all of the basic
+   methods and almost finished the writing to and reading from file. 
+   
+2. checkpoint (24.3.)
+ - The readFromFile was tested properly and some changes were implemented in the FileOperations so that they
+   work as wanted. Some changes were made to the saving of the coordinates for pieces in the Game class to avoid bugs.
+ - The scalatest and scalas swing libraries were imported successfully.
+ - The GUI was started. The layout was finished that consists of the background and the frames for the board and the pile.
+   Some buttons were added on top of it. It was tested that the SimpleSwingApplication listens to the buttons correctly
+   and reacts to the buttons being clicked.
+ - The GUI was implemented so that it uses the other created classes.
+ - Saving a game situation to a file and continuing a saved game were added using FileOperations. The file format was extended
+   with information stored from the pile and the solution of the game.  
+ - In class PileOfPieces methods for getting the piece on top of the pile and for flipping through the pile to the right and left
+   were added. Arrow buttons were added, it was tested that by pressing on them the piece on top changes  
+ - The piece on top of the pile and the pieces on the board were drawn as well as the symbols for each side of the pieces. 
+ - Listening to the mouses clicks and moves were added to the GUI. A functionality was added that by clicking on the piece in the pile
+   it rotates. Dragging pieces was made possible in a way that the image of the moving piece follows the arrow on the screen. These were
+   both checked that they work properly
+ - To the addPiece in class Board some changes were made so that if a piece is not in a suitable position for the place that it is added to
+   it is automatically rotated. After this it was possible to enable rotating pieces in GUI on the board by clicking on them.
+ - The gameOver condition was changed so that it also takes into consideration the position of the pieces on the board. The condition for the
+   game being over was added to be called in the GUI to make the game recognise when the game is over. It was tested that it works correctly.
+ - Some pop up windows were added to give some instructions for the player.
+ - The GUI as well as the other classes were almost finished so that it is possible to play the game.
+ - The intelligent algorithm was started. Some helper methods for recognising whether the piece is correct were made and some attempts to create
+   the algorithm were made but the algorithm doesn't work properly yet.     
+ - There haven't been that many problems with the puzzle only some minor issues. With some thinking I have been able to fix
+   all of them. The only tricky part has been the GUI and finding information about it but with some searching I've found what I've needed.
+   The intelligent algorithm seems to be quite tricky as well and some problems might occur while making that.
+ - The workload was about 50 hours.      
+ - I'm progressing surprisingly well and am in time if we look at the schedule I made. I've already completed the GUI except for 
+   some additional testing. The game is so ready that it can be played but needs to be tested some more as well. I have even started the
+   intelligent algorithm even though it is not ready at all. We're only on the fifth week and the only things to do are the intelligent
+   algorithm and some testing so I will most likely have enough time for finishing the project.
+   
+3. checkpoint (7.4.)               
+ - The method solveGame for the intelligent algorithm was implemented. The method goes the pile through in order and always picks the 
+   next piece from the pile. It takes the piece and with the help of some help methods checks whether the piece is suitable in the position
+   on the board or not. If it isn't, the method takes the next piece and so on. In case it has gone through the entire pile, it returns one step
+   back and starts to look for other new pieces for that position.
+ - Some small changes still need to be done, since the method doesn't yet remove the pieces from the pile after it has added them to the board.  
+ - The method is tested so that it is able to find one solution where all of the pieces on the board are correct, meaning that the symbols on
+   the sides of every piece match the symbols of the pieces around it.
+ - While doing the intelligent algorithm I noticed, that from the 24 generated pieces it is possible to find several solutions where all of the symbols
+   match. This causes a problem that now my method finds a solution but it isn't the same one that has been generated at the beginning of the game. 
+   Can the game accept all of these solutions where the symbols match correctly even though they aren't the generated solution? Right now 
+   my game only accepts the generated solution as correct, but this would make it challenging for humans to solve the game, since they would
+   have to find the exact solution from all the possible ones.   
+ - This week is the exam week, and I had to read to two exams as well as do a group project for another course so I haven't had that much time
+   to continue on my project. Therefore, I haven't gotten that much done.
+ - Even though I've had a little break in the making of the game, I'm in my schedule. Actually, the game is almost finished, and I only need 
+   to do some minor modifications and test the game a bit more as well as write the document. Two and a half weeks should be enough time to do this. 
+     

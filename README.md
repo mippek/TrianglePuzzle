@@ -1,1 +1,2 @@
-# TrianglePuzzle
+# OS2-Puzzle-project
+
